@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahba — Full-Stack Developer & Builder</title>
+    <meta name="description" content="Full-stack developer crafting exceptional digital experiences. Specializing in Python, React, Node.js, PHP, and WordPress. Available for freelance and full-time opportunities.">
+    <meta name="keywords" content="Wahba, Full-Stack Developer, Python Developer, React Developer, Node.js, PHP, WordPress, Web Development, Alexandria Egypt">
+    <meta name="author" content="Wahba">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://realwahba.github.io/">
+    <meta property="og:title" content="Wahba — Full-Stack Developer & Builder">
+    <meta property="og:description" content="Full-stack developer crafting exceptional digital experiences. Specializing in Python, React, Node.js, PHP, and WordPress.">
+    <meta property="og:image" content="https://realwahba.github.io/imgs/POS/pos-dashboard.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://realwahba.github.io/">
+    <meta property="twitter:title" content="Wahba — Full-Stack Developer & Builder">
+    <meta property="twitter:description" content="Full-stack developer crafting exceptional digital experiences. Specializing in Python, React, Node.js, PHP, and WordPress.">
+    <meta property="twitter:image" content="https://realwahba.github.io/imgs/POS/pos-dashboard.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="terminal-prompt">$</span> wahba
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-btn" id="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">wahba@portfolio:~</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command" id="terminal-cmd"></span>
+                        <span class="cursor-blink">_</span>
+                    </div>
+                    <div class="terminal-output" id="terminal-output"></div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">I'm Wahba,</span>
+                    <span class="title-line">I build</span>
+                    <span class="title-line highlight">digital products</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Full-stack developer & business strategist crafting exceptional digital experiences.
+                    From Python POS systems to React web apps — I turn ideas into reality.
+                </p>
+                <div class="hero-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">WordPress</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#work" class="btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Main About Card -->
+                <div class="bento-card large">
+                    <div class="card-content">
+                        <h3>Developer & Builder</h3>
+                        <p>I'm Wahba, a <strong>self-taught full-stack developer</strong> with a unique superpower: I understand business as deeply as I understand code.</p>
+                        <p>Currently pursuing <strong>Business Management & Accounting</strong> at Alexandria University while crafting production-ready applications that solve real-world problems.</p>
+                        <p>My journey spans across WordPress, Node.js, Python, PHP, and React — but what truly sets me apart is my ability to translate business requirements into elegant technical solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Card -->
+                <div class="bento-card stat-card">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div class="stat-bar"></div>
+                </div>
+
+                <div class="bento-card stat-card">
+                    <div class="stat">
+                        <h3>7+</h3>
+                        <p>Tech Stacks</p>
+                    </div>
+                    <div class="stat-bar"></div>
+                </div>
+
+                <!-- Location Card -->
+                <div class="bento-card icon-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Based in</h4>
+                    <p>Alexandria, Egypt</p>
+                </div>
+
+                <!-- Status Card -->
+                <div class="bento-card icon-card accent">
+                    <i class="fas fa-circle status-dot"></i>
+                    <h4>Status</h4>
+                    <p>Available for work</p>
+                </div>
+
+                <!-- Tech Stack Card -->
+                <div class="bento-card medium">
+                    <h4>Current Stack</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">PHP</span>
+                        <span class="tech-item">MySQL</span>
+                        <span class="tech-item">WordPress</span>
+                    </div>
+                </div>
+
+                <!-- Resume Download Card -->
+                <div class="bento-card icon-card cv-card">
+                    <i class="fas fa-file-download"></i>
+                    <h4>Resume</h4>
+                    <p>View & download my CV</p>
+                    <a href="cv.html" target="_blank" class="cv-download-btn">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <div class="work-container">
+            <div class="section-header">
+                <span class="section-label">Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- POS System - Featured -->
+                <div class="project-card featured" data-magnetic>
+                    <div class="project-image-gallery">
+                        <div class="gallery-main">
+                            <img src="imgs/POS/pos-dashboard.png" alt="POS Dashboard" class="gallery-main-img" loading="lazy">
+                            <div class="project-overlay" onclick="openGallery('pos')">
+                                <span class="view-project"><i class="fas fa-search-plus"></i> View Gallery</span>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="imgs/POS/pos-login.png" alt="POS Login" onclick="openGallery('pos', 0)" loading="lazy">
+                            <img src="imgs/POS/pos-dashboard.png" alt="POS Dashboard" onclick="openGallery('pos', 1)" loading="lazy">
+                            <img src="imgs/POS/pos-sale.png" alt="POS Sale" onclick="openGallery('pos', 2)" loading="lazy">
+                            <img src="imgs/POS/pos-enter_weight.png" alt="POS Weight" onclick="openGallery('pos', 3)" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badges">
+                            <span class="badge-private"><i class="fas fa-lock"></i> Private</span>
+                            <span class="badge-custom"><i class="fas fa-tools"></i> Custom Build</span>
+                        </div>
+                        <span class="project-label">Desktop App • 2025</span>
+                        <h3>POS Complete System</h3>
+                        <p>Comprehensive Point of Sale system built with Python. Features inventory management, multi-payment methods, real-time analytics, and custom business workflows.</p>
+                        <div class="project-stack">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Estate Platform - Featured -->
+                <div class="project-card featured" data-magnetic>
+                    <div class="project-image-gallery">
+                        <div class="gallery-main">
+                            <img src="imgs/estate/estate-agent-profile.png" alt="Estate Platform" class="gallery-main-img" loading="lazy">
+                            <div class="project-overlay" onclick="openGallery('estate')">
+                                <span class="view-project"><i class="fas fa-search-plus"></i> View Gallery</span>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="imgs/estate/estate-login.png" alt="Login" onclick="openGallery('estate', 0)" loading="lazy">
+                            <img src="imgs/estate/estate-agent-profile.png" alt="Agent Profile" onclick="openGallery('estate', 1)" loading="lazy">
+                            <img src="imgs/estate/estate-contact.png" alt="Contact" onclick="openGallery('estate', 2)" loading="lazy">
+                            <img src="imgs/estate/estate-wallet.png" alt="Wallet" onclick="openGallery('estate', 3)" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badges">
+                            <span class="badge-private"><i class="fas fa-lock"></i> Private</span>
+                            <span class="badge-custom"><i class="fas fa-tools"></i> Custom Build</span>
+                        </div>
+                        <span class="project-label">Web Platform • 2025</span>
+                        <h3>EstateHub Platform</h3>
+                        <p>Full-featured real estate platform with agent profiles, property listings, wallet system, and complete authentication system. Custom-built from scratch.</p>
+                        <div class="project-stack">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Bulk -->
+                <div class="project-card" data-magnetic>
+                    <div class="project-info">
+                        <div class="project-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="project-label">Automation • 2025</span>
+                        <h3>WhatsApp Bulk Sender</h3>
+                        <p>Electron-based bulk messaging application with whatsapp-web.js integration.</p>
+                        <div class="project-stack">
+                            <span>Electron</span>
+                            <span>Node.js</span>
+                        </div>
+                        <a href="https://github.com/Realwahba/whatsapp-bulk-sender-EG" target="_blank" class="project-link">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- React POS -->
+                <div class="project-card" data-magnetic>
+                    <div class="project-info">
+                        <div class="project-icon">
+                            <i class="fas fa-cash-register"></i>
+                        </div>
+                        <span class="project-label">Web App • 2024</span>
+                        <h3>React POS Interface</h3>
+                        <p>Clean React.js checkout interface for retail with efficient transaction processing.</p>
+                        <div class="project-stack">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/Realwahba/Supermarket-POS-System" target="_blank" class="project-link">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KeyCart -->
+                <div class="project-card" data-magnetic>
+                    <div class="project-info">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span class="project-label">E-commerce • 2025</span>
+                        <h3>KeyCart.net</h3>
+                        <p>Full-featured e-commerce platform for digital products with custom WordPress plugins.</p>
+                        <div class="project-stack">
+                            <span>WordPress</span>
+                            <span>WooCommerce</span>
+                            <span>PHP</span>
+                        </div>
+                        <a href="https://keycart.net" target="_blank" class="project-link">
+                            <span>Visit Site</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Group -->
+                <div class="project-card" data-magnetic>
+                    <div class="project-info">
+                        <div class="project-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="project-label">Automation • 2025</span>
+                        <h3>WhatsApp Group Sender</h3>
+                        <p>Advanced mass communication tool for efficient group messaging and campaigns.</p>
+                        <div class="project-stack">
+                            <span>Node.js</span>
+                            <span>API</span>
+                        </div>
+                        <a href="https://github.com/Realwahba/WhatsApp-Group-Sender" target="_blank" class="project-link">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WordPress Plugins -->
+                <div class="project-card" data-magnetic>
+                    <div class="project-info">
+                        <div class="project-icon">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <span class="project-label">WordPress • 2024-2025</span>
+                        <h3>Custom WooCommerce Plugins</h3>
+                        <p>Suite of open-source WordPress plugins enhancing WooCommerce functionality with support tickets, WhatsApp integration, and account management.</p>
+                        <div class="project-stack">
+                            <span>WordPress</span>
+                            <span>WooCommerce</span>
+                            <span>PHP</span>
+                        </div>
+                        <a href="https://github.com/Realwahba?tab=repositories" target="_blank" class="project-link">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub CTA -->
+            <div class="github-cta" data-magnetic>
+                <div class="cta-content">
+                    <h3>Want to see more?</h3>
+                    <p>Check out my GitHub for more projects and open-source contributions</p>
+                    <a href="https://github.com/Realwahba" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i>
+                        <span>Visit GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p class="contact-lead">I'm currently available for freelance work and full-time opportunities.</p>
+                    <p>Whether you need a custom WordPress site, a Python desktop application, or a full-stack web solution — I'm here to help bring your ideas to life.</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <h3>Send Me a Message</h3>
+                        <p class="form-description">Have a project in mind? Let's discuss how I can help!</p>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">
+                                        <i class="fas fa-user"></i>
+                                        Your Name
+                                    </label>
+                                    <input type="text" id="name" name="name" placeholder="Wahba" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i>
+                                        Your Email
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="wahba@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i>
+                                        Phone Number
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+20 123 456 7890">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">
+                                        <i class="fas fa-tag"></i>
+                                        Subject
+                                    </label>
+                                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment-dots"></i>
+                                    Message
+                                </label>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+
+                            <div class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-cards">
+                    <a href="https://wa.me/201221048150" target="_blank" class="contact-card whatsapp-card" data-magnetic>
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">WhatsApp</span>
+                            <h4>+20 122 104 8150</h4>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </a>
+
+                    <a href="mailto:business.wahba@gmail.com" class="contact-card" data-magnetic>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <h4>business.wahba@gmail.com</h4>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </a>
+
+                    <a href="https://github.com/Realwahba" target="_blank" class="contact-card" data-magnetic>
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">GitHub</span>
+                            <h4>@Realwahba</h4>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/heywahba/" target="_blank" class="contact-card" data-magnetic>
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">LinkedIn</span>
+                            <h4>heywahba</h4>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </a>
+
+                    <a href="https://keycart.net" target="_blank" class="contact-card" data-magnetic>
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Website</span>
+                            <h4>KeyCart.net</h4>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>Designed & Built by <strong>Wahba</strong></p>
+                <p class="footer-year">© 2025</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Realwahba" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/heywahba/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:business.wahba@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Gallery Modal -->
+    <div class="gallery-modal" id="gallery-modal">
+        <button class="gallery-close" onclick="closeGallery()">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="gallery-nav gallery-prev" onclick="navigateGallery(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="gallery-nav gallery-next" onclick="navigateGallery(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="gallery-content">
+            <img id="gallery-image" src="" alt="Project Screenshot">
+            <div class="gallery-info">
+                <span id="gallery-counter">1 / 6</span>
+                <p id="gallery-caption">Screenshot</p>
+            </div>
+        </div>
+        <div class="gallery-thumbnails-nav">
+            <!-- Thumbnails will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

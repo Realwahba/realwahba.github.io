@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahba - CV/Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-header {
+            background: #ffffff;
+            border-top: 5px solid #0088cc;
+            padding: 50px 60px;
+            position: relative;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .cv-header-content {
+            position: relative;
+        }
+
+        .cv-name {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #1a1a24;
+            letter-spacing: -0.5px;
+        }
+
+        .cv-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #0088cc;
+            margin-bottom: 25px;
+        }
+
+        .cv-contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 30px;
+            font-size: 14px;
+        }
+
+        .cv-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cv-contact-item i {
+            color: #0088cc;
+            width: 18px;
+            font-size: 14px;
+        }
+
+        .cv-contact-item a {
+            color: #4a4a5e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .cv-contact-item a:hover {
+            color: #0088cc;
+        }
+
+        .cv-contact-item span {
+            color: #4a4a5e;
+        }
+
+        .cv-body {
+            padding: 50px 60px;
+        }
+
+        .cv-section {
+            margin-bottom: 40px;
+        }
+
+        .cv-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a24;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0088cc;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cv-section-title i {
+            color: #0088cc;
+            font-size: 18px;
+        }
+
+        .cv-summary {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #4a4a5e;
+        }
+
+        .cv-item {
+            margin-bottom: 25px;
+        }
+
+        .cv-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .cv-item-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a0a0f;
+        }
+
+        .cv-item-date {
+            font-size: 14px;
+            color: #0088cc;
+            font-weight: 500;
+        }
+
+        .cv-item-subtitle {
+            font-size: 15px;
+            color: #6b6b7e;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .cv-item-description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #4a4a5e;
+            margin-bottom: 10px;
+        }
+
+        .cv-item-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cv-item-list li {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #4a4a5e;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .cv-item-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #0088cc;
+            font-weight: bold;
+        }
+
+        .cv-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .cv-tag {
+            padding: 4px 12px;
+            background: rgba(0, 136, 204, 0.1);
+            border: 1px solid rgba(0, 136, 204, 0.3);
+            border-radius: 12px;
+            font-size: 12px;
+            color: #0088cc;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #4a4a5e;
+        }
+
+        .skill-item i {
+            color: #0088cc;
+            width: 16px;
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .download-btn {
+                display: none;
+            }
+
+            .cv-header {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                padding: 30px 35px;
+                border-top: 4px solid #0088cc;
+            }
+
+            .cv-body {
+                padding: 25px 35px;
+            }
+
+            .cv-section {
+                page-break-inside: auto;
+                margin-bottom: 20px;
+                /* Force sections visible - override scroll animations */
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+
+            .cv-section-title {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+
+            .cv-item {
+                page-break-inside: avoid;
+                margin-bottom: 15px;
+            }
+
+            /* Force specific sections to stay together */
+            .cv-section:first-child {
+                page-break-after: avoid;
+            }
+
+            /* Reduce spacing for print */
+            .cv-item-list li {
+                margin-bottom: 3px;
+            }
+
+            .cv-tags {
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cv-header, .cv-body {
+                padding: 30px 30px;
+            }
+
+            .cv-name {
+                font-size: 36px;
+            }
+
+            .cv-title {
+                font-size: 20px;
+            }
+
+            .cv-contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-btn {
+                position: static;
+                margin: 0 auto 20px;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="window.print()">
+        <i class="fas fa-download"></i>
+        Download PDF
+    </button>
+
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="cv-header">
+            <div class="cv-header-content">
+                <h1 class="cv-name">Wahba</h1>
+                <p class="cv-title">Full-Stack Developer & Business Strategist</p>
+                <div class="cv-contact">
+                    <div class="cv-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201221048150">+20 122 104 8150</a>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:business.wahba@gmail.com">business.wahba@gmail.com</a>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Alexandria, Egypt</span>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Realwahba" target="_blank">github.com/Realwahba</a>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/heywahba/" target="_blank">linkedin.com/in/heywahba</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="cv-body">
+            <!-- Summary -->
+            <div class="cv-section">
+                <h2 class="cv-section-title">
+                    <i class="fas fa-user"></i>
+                    Professional Summary
+                </h2>
+                <p class="cv-summary">
+                    Self-taught Full-Stack Developer with a unique combination of technical expertise and business acumen. Currently pursuing Business Management & Accounting at Alexandria University while building production-ready applications. Proven track record of delivering 50+ projects, specializing in Python desktop applications, React web apps, and WordPress solutions. Strong ability to translate business requirements into elegant technical solutions.
+                </p>
+            </div>
+
+            <!-- Experience -->
+            <div class="cv-section">
+                <h2 class="cv-section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Professional Experience
+                </h2>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">Frontend Developer</h3>
+                        <span class="cv-item-date">2025 - Present</span>
+                    </div>
+                    <p class="cv-item-subtitle">Real Estate Platform • Freelance</p>
+                    <p class="cv-item-description">
+                        Led frontend development of a comprehensive real estate platform, creating seamless user experiences with PHP and modern web technologies.
+                    </p>
+                    <ul class="cv-item-list">
+                        <li>Built complete frontend architecture from scratch</li>
+                        <li>Implemented dynamic property listing system with advanced search</li>
+                        <li>Developed agent profile dashboards and wallet system</li>
+                        <li>Ensured responsive design across all devices</li>
+                    </ul>
+                    <div class="cv-tags">
+                        <span class="cv-tag">PHP</span>
+                        <span class="cv-tag">MySQL</span>
+                        <span class="cv-tag">JavaScript</span>
+                        <span class="cv-tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">Founder & Developer</h3>
+                        <span class="cv-item-date">2025 - Present</span>
+                    </div>
+                    <p class="cv-item-subtitle">KeyCart.net • E-commerce Platform</p>
+                    <p class="cv-item-description">
+                        Founded and developed a full-featured e-commerce platform for digital products using WordPress and custom development.
+                    </p>
+                    <ul class="cv-item-list">
+                        <li>Full technical development and ongoing maintenance</li>
+                        <li>Custom digital delivery system implementation</li>
+                        <li>Business strategy and marketing execution</li>
+                        <li>Payment gateway integration and security</li>
+                    </ul>
+                    <div class="cv-tags">
+                        <span class="cv-tag">WordPress</span>
+                        <span class="cv-tag">WooCommerce</span>
+                        <span class="cv-tag">PHP</span>
+                        <span class="cv-tag">Custom Plugins</span>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">Freelance Full-Stack Developer</h3>
+                        <span class="cv-item-date">2023 - Present</span>
+                    </div>
+                    <p class="cv-item-subtitle">Independent Contractor</p>
+                    <p class="cv-item-description">
+                        Developing custom solutions from desktop applications to web platforms, specializing in business automation and e-commerce.
+                    </p>
+                    <ul class="cv-item-list">
+                        <li>Delivered 50+ projects across various technologies</li>
+                        <li>Specialized in Python desktop applications and React web apps</li>
+                        <li>Maintained 100% client satisfaction rate</li>
+                    </ul>
+                    <div class="cv-tags">
+                        <span class="cv-tag">Python</span>
+                        <span class="cv-tag">React</span>
+                        <span class="cv-tag">Node.js</span>
+                        <span class="cv-tag">WordPress</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Projects -->
+            <div class="cv-section">
+                <h2 class="cv-section-title">
+                    <i class="fas fa-code"></i>
+                    Key Projects
+                </h2>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">POS Complete System</h3>
+                        <span class="cv-item-date">2025</span>
+                    </div>
+                    <p class="cv-item-description">
+                        Comprehensive Point of Sale system built with Python featuring real-time dashboard, inventory management, multi-payment methods, and detailed reporting.
+                    </p>
+                    <ul class="cv-item-list">
+                        <li>Custom business logic with weight entry system</li>
+                        <li>Real-time analytics dashboard</li>
+                        <li>Multi-payment processing (Cash, Card, Credit)</li>
+                        <li>Complete inventory and customer management</li>
+                    </ul>
+                    <div class="cv-tags">
+                        <span class="cv-tag">Python</span>
+                        <span class="cv-tag">Tkinter</span>
+                        <span class="cv-tag">SQLite</span>
+                        <span class="cv-tag">Desktop App</span>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">WhatsApp Automation Suite</h3>
+                        <span class="cv-item-date">2025</span>
+                    </div>
+                    <p class="cv-item-description">
+                        Electron-based bulk messaging applications for streamlined mass communication.
+                    </p>
+                    <ul class="cv-item-list">
+                        <li>Built with whatsapp-web.js integration</li>
+                        <li>Group and individual messaging capabilities</li>
+                        <li>Open-source projects on GitHub</li>
+                    </ul>
+                    <div class="cv-tags">
+                        <span class="cv-tag">Electron</span>
+                        <span class="cv-tag">Node.js</span>
+                        <span class="cv-tag">WhatsApp API</span>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">React POS Interface</h3>
+                        <span class="cv-item-date">2024</span>
+                    </div>
+                    <p class="cv-item-description">
+                        Clean React.js checkout interface for retail with efficient transaction processing.
+                    </p>
+                    <div class="cv-tags">
+                        <span class="cv-tag">React.js</span>
+                        <span class="cv-tag">UI/UX</span>
+                        <span class="cv-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">WordPress Custom Plugins Suite</h3>
+                        <span class="cv-item-date">2024 - 2025</span>
+                    </div>
+                    <p class="cv-item-description">
+                        Developed custom WordPress plugins to enhance WooCommerce functionality and improve user experience for e-commerce operations.
+                    </p>
+                    <ul class="cv-item-list">
+                        <li><strong>KeyCart Support Ticket System:</strong> Complete support management with admin dashboard, email notifications, CSV export, and priority categorization</li>
+                        <li><strong>WC WhatsApp Support:</strong> Modern WhatsApp integration with floating button, customizable messages, and multi-country support</li>
+                        <li><strong>WC Account Options:</strong> Account management during checkout, supporting simple, variable, and grouped products</li>
+                        <li>All plugins open-source on GitHub with 50+ downloads and active maintenance</li>
+                    </ul>
+                    <div class="cv-tags">
+                        <span class="cv-tag">WordPress</span>
+                        <span class="cv-tag">WooCommerce</span>
+                        <span class="cv-tag">PHP</span>
+                        <span class="cv-tag">Plugin Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="cv-section">
+                <h2 class="cv-section-title">
+                    <i class="fas fa-laptop-code"></i>
+                    Technical Skills
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Languages:</strong> Python, JavaScript, PHP, SQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Frontend:</strong> React.js, HTML5, CSS3, Tkinter</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Backend:</strong> Node.js, PHP, Express.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Databases:</strong> MySQL, SQLite, MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>CMS:</strong> WordPress, WooCommerce</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Tools:</strong> Git, GitHub, Electron, APIs</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Design:</strong> Responsive Design, UI/UX</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Business:</strong> E-commerce, Automation, POS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="cv-section">
+                <h2 class="cv-section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <h3 class="cv-item-title">Business Management & Accounting</h3>
+                        <span class="cv-item-date">In Progress</span>
+                    </div>
+                    <p class="cv-item-subtitle">Alexandria University • Egypt</p>
+                    <p class="cv-item-description">
+                        Combining formal business education with self-taught technical skills to deliver comprehensive solutions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="cv-section">
+                <h2 class="cv-section-title">
+                    <i class="fas fa-trophy"></i>
+                    Key Achievements
+                </h2>
+                <ul class="cv-item-list">
+                    <li>Delivered 50+ successful projects with 100% client satisfaction</li>
+                    <li>Built and scaled a profitable e-commerce business (KeyCart.net)</li>
+                    <li>Developed production-ready POS system from scratch</li>
+                    <li>Contributed to open-source projects on GitHub</li>
+                    <li>Self-taught developer mastering 7+ technology stacks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add animation on scroll
+        const sections = document.querySelectorAll('.cv-section');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
